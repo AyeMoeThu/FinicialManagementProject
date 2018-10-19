@@ -10,7 +10,7 @@ Public rsdelete As New ADODB.Recordset
 
 Public Function OpenConn()
     Set mCon = New ADODB.Connection
-    mCon.ConnectionString = "Connection"
+    mCon.ConnectionString = "Connection1"
     
 End Function
 
