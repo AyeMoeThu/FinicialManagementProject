@@ -16,7 +16,7 @@ Public Function openConnection() As Boolean
  Dim l_ConnString As String
  Dim l_Sqlcmd As String
  
- Set l_ConnString = "Provider = MSDASQL; driver ={SQL Server}; database=db; server=localhost\sqlexpress;uid=sa;pwd=123;"
+ 'Set l_ConnString = "Provider = MSDASQL; driver ={SQL Server}; database=db; server=localhost\sqlexpress;uid=sa;pwd=123;"
  
 
 End Function

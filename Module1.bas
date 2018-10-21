@@ -8,6 +8,10 @@ Public mRsUpdate As New ADODB.Recordset
 Public mRsDelete As New ADODB.Recordset
 Public mADOConString As String
 
+Public Function GetConnection()
+
+
+End Function
 
 
 Public Function OpenConn()
