@@ -81,7 +81,7 @@ Function InformMessage(MsgPrompt As String, MsgTitle As String, Optional Typ As 
 End Function
 
 Sub Wait()
-    Screen.MousePointer = 0
+    Screen.MousePointer = 0 'Comment
 End Sub
 
 Sub EndWait()
