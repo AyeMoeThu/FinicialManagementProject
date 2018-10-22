@@ -1,4 +1,4 @@
-Attribute VB_Name = "Common"
+Attribute VB_Name = "CommonUsage"
 'Declartion as use in the project for connection
 Option Explicit
 
