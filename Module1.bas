@@ -85,7 +85,7 @@ Sub Wait()
 End Sub
 
 Sub EndWait()
-    Screen.MousePointer = 0
+    Screen.MousePointer = 0 'comment
 End Sub
 
 
