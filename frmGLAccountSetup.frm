@@ -32,7 +32,7 @@ Begin VB.Form frmGLAccountSetup
          Top             =   2640
          Width           =   3615
       End
-      Begin VB.TextBox Text1 
+      Begin VB.TextBox txtAccountName 
          Height          =   375
          Left            =   1920
          TabIndex        =   7
@@ -93,3 +93,20 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
+
+Private Sub btnSave_Click()
+    Dim mDAOGlAccount As New DAOGLAccount
+    
+    With mDAOGlAccount.GLAccount
+         .ID = 0
+         .AccountNumber = Trim(frmGLAccountSetup.txtAccountNumber.Text)
+         .AccountName = Trim(frmGLAccountSetup.txtAccountName.Text)
+         .AccountType = 0 'frmGLAccountSetup.cboAccountType.ListIndex
+         .Remarks = Trim(frmGLAccountSetup.txtRemark.Text)
+    End With
+    
+        mDAOGlAccount.SaveRecord
+        
+End Sub
+

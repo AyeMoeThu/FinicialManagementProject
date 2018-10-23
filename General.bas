@@ -11,10 +11,15 @@ Public mADOConString As String
 
 Function GetConnection()
 
-     mADOConString = "ODBC;DRIVER={SQL Server};SERVER=" + gsLSN + _
+     'mADOConString = "ODBC;DRIVER={SQL Server};SERVER=" + gsLSN + _
                 ";UID=" + gsLID + ";PWD=" + gsLPW + _
                 ";APP=Visual Basics;Database=" + gsLDN + _
                 ";QueryLog_On=Yes;Time=900000"
+                
+    ' mADOConString = "ODBC;DRIVER={SQL Server};SERVER=DESKTOP-3NV6EV7" + _
+                ";UID=sa;PWD=sa123;APP=Visual Basics;Database=FinicialManagement;QueryLog_On=Yes;Time=900000"
+    mADOConString = "PROVIDER = MSDASQL;driver={SQL Server};database=FinicialManagement;server=DESKTOP-3NV6EV7;uid=sa;pwd=sa123;"
+
 
 End Function
 
@@ -73,7 +78,7 @@ Function InformMessage(MsgPrompt As String, MsgTitle As String, Optional Typ As 
         End If
     Case 8
         If MsgBox(MsgPrompt, vbExclamation + vbYesNo, MsgTitle) = vbNo Then
-            Information = False
+            InformMessage = False
         End If
     Case Else
         MsgBox MsgPrompt, vbInformation, MsgTitle
@@ -81,7 +86,7 @@ Function InformMessage(MsgPrompt As String, MsgTitle As String, Optional Typ As 
 End Function
 
 Sub Wait()
-    Screen.MousePointer = 0 'Comment
+    Screen.MousePointer = 0
 End Sub
 
 Sub EndWait()
